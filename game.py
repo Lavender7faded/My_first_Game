@@ -2,26 +2,25 @@ import pygame
 
 pygame.init()
 
-winHeight = 577
-winWidht = 800
-win = pygame.display.set_mode((winWidht, winHeight))
+size = (winWidht, winHeight) = (900, 420) 
+win = pygame.display.set_mode(size)
 
 pygame.display.set_caption("Cubes Game")
 
-walkRight = [pygame.image.load('/Users/ann/Documents//webdev/My_first_Game/paku_Walk_1.png'), pygame.image.load('/Users/ann/Documents/webdev/My_first_Game/paku_Walk_2.png'), pygame.image.load('/Users/ann/Documents/webdev/My_first_Game/paku_Walk_3.png'), pygame.image.load('/Users/ann/Documents/webdev/My_first_Game/paku_Walk_4.png'), pygame.image.load('/Users/ann/Documents/webdev/My_first_Game/paku_Walk_5.png'), pygame.image.load('/Users/ann/Documents/webdev/My_first_Game/paku_Walk_6.png')]
-walkLeft = [pygame.image.load('/Users/ann/Documents/webdev/My_first_Game/paku_Walk_Left_1.png'), pygame.image.load('/Users/ann/Documents/webdev/My_first_Game/paku_Walk_Left_2.png'), pygame.image.load('/Users/ann/Documents/webdev/My_first_Game/paku_Walk_Left_3.png'), pygame.image.load('/Users/ann/Documents/webdev/My_first_Game/paku_Walk_Left_4.png'), pygame.image.load('/Users/ann/Documents/webdev/My_first_Game/paku_Walk_Left_5.png'), pygame.image.load('/Users/ann/Documents/webdev/My_first_Game/paku_Walk_Left_6.png')]
+walkRight = [pygame.image.load('C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Walk_1.png'), pygame.image.load('C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Walk_2.png'), pygame.image.load('C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Walk_3.png'), pygame.image.load('C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Walk_4.png'), pygame.image.load('C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Walk_5.png'), pygame.image.load('C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Walk_6.png')]
+walkLeft = [pygame.image.load('C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Walk_Left_1.png'), pygame.image.load('C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Walk_Left_2.png'), pygame.image.load('C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Walk_Left_3.png'), pygame.image.load('C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Walk_Left_4.png'), pygame.image.load('C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Walk_Left_5.png'), pygame.image.load('C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Walk_Left_6.png')]
 
-# jumpRight = [pygame.image.load('/Users/ann/Documents/webdev/My_first_Game/paku_Jump_1.png'), pygame.image.load('/Users/ann/Documents/webdev/My_first_Game/paku_Jump_2.png'), pygame.image.load('/Users/ann/Documents/webdev/My_first_Game/paku_Jump_3.png'), pygame.image.load('/Users/ann/Documents/webdev/My_first_Game/paku_Jump_4.png'), pygame.image.load('/Users/ann/Documents/webdev/My_first_Game/paku_Jump_5.png'), pygame.image.load('/Users/ann/Documents/webdev/My_first_Game/paku_Jump_6.png')]
-# jumpLeft = [pygame.image.load('/Users/ann/Documents/webdev/My_first_Game/paku_Jump_Left_1.png'), pygame.image.load(r'/Users/ann/Documents/webdev/My_first_Game/paku_Jump_Left_2.png'), pygame.image.load(r'/Users/ann/Documents/webdev/My_first_Game/paku_Jump_Left_3.png'), pygame.image.load(r'/Users/ann/Documents/webdev/My_first_Game/paku_Jump_Left_4.png'), pygame.image.load(r'/Users/ann/Documents/webdev/My_first_Game/paku_Jump_Left_5.png'), pygame.image.load(r'/Users/ann/Documents/webdev/My_first_Game/paku_Jump_Left_6.png').convert()]
+# jumpRight = [pygame.image.load('C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Jump_1.png'), pygame.image.load('C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Jump_2.png'), pygame.image.load('C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Jump_3.png'), pygame.image.load('C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Jump_4.png'), pygame.image.load('C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Jump_5.png'), pygame.image.load('C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Jump_6.png')]
+# jumpLeft = [pygame.image.load('C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Jump_Left_1.png'), pygame.image.load(r'C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Jump_Left_2.png'), pygame.image.load(r'C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Jump_Left_3.png'), pygame.image.load(r'C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Jump_Left_4.png'), pygame.image.load(r'C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Jump_Left_5.png'), pygame.image.load(r'C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Jump_Left_6.png').convert()]
 
-playerStand = pygame.image.load('/Users/ann/Documents/webdev/My_first_Game/paku_Idle.png')
+playerStand = pygame.image.load('C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/paku_Idle.png')
 
-background = pygame.image.load('/Users/ann/Documents/webdev/My_first_Game/alien_planet.png')
+background = pygame.image.load('C:/Users/ann/Documents/Python/webdev/khishchenko/my_first_game/space.jpg')
 
 clock = pygame.time.Clock()
 
 x = 50
-y = 480
+y = 315
 widht = 100
 height = 100
 speed = 5
@@ -38,27 +37,27 @@ platform_WIDTH = 32
 platform_HEIGHT = 32
 platform_COLOR = (102, 0, 102)
 
-level = [
-       "-------------------------",
-       "-                       -",
-       "-                       -",
-       "-                       -",
-       "-            --         -",
-       "-                       -",
-       "--                      -",
-       "-                       -",
-       "-                   --- -",
-       "-                       -",
-       "-                       -",
-       "-      ---              -",
-       "-                       -",
-       "-   -----------        -",
-       "-                       -",
-       "-                -      -",
-       "-                   --  -",
-       "-                       -",
-       "-                       -",
-       "-------------------------"]
+# level = [
+#        "-------------------------",
+#        "-                       -",
+#        "-                       -",
+#        "-                       -",
+#        "-            --         -",
+#        "-                       -",
+#        "--                      -",
+#        "-                       -",
+#        "-                   --- -",
+#        "-                       -",
+#        "-                       -",
+#        "-      ---              -",
+#        "-                       -",
+#        "-   -----------        -",
+#        "-                       -",
+#        "-                -      -",
+#        "-                   --  -",
+#        "-                       -",
+#        "-                       -",
+#        "-------------------------"]
 
 def drawWindow():
     global animCount
@@ -121,18 +120,18 @@ while run:
             isJump = False
             jumpCount = 10
 
-    i=z=0 # координаты
-    for row in level: # вся строка
-        for col in row: # каждый символ
-            if col == "-":
-                #создаем блок, заливаем его цветом и рисеум его
-                pf = pygame.display.set_mode((platform_WIDTH, platform_HEIGHT))
-                pf.fill(platform_COLOR)
-                win.blit(pf,(i,z))
+    # i=z=0 # координаты
+    # for row in level: # вся строка
+    #     for col in row: # каждый символ
+    #         if col == "-":
+    #             #создаем блок, заливаем его цветом и рисеум его
+    #             pf = pygame.display.set_mode((platform_WIDTH, platform_HEIGHT))
+    #             pf.fill(platform_COLOR)
+    #             win.blit(pf,(i,z))
                     
-            i += platform_WIDTH #блоки платформы ставятся на ширине блоков
-        z += platform_HEIGHT    #то же самое и с высотой
-        i = 0                
+        #     i += platform_WIDTH #блоки платформы ставятся на ширине блоков
+        # z += platform_HEIGHT    #то же самое и с высотой
+        # i = 0                
     
     drawWindow()
 
